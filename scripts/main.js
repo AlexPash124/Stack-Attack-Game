@@ -1,14 +1,23 @@
-import GameSceneUI from "./GameSceneUI.js";
-import {screenConfig} from "./config.js";
+let scene = new Phaser.Scene("Stack-Attack-Game");
 
-const scene = new GameSceneUI();
-const config = {
-    type: Phaser.AUTO, //webGl or canvas
-    width: screenConfig.WIDTH,
-    height: screenConfig.HEIGHT,
-    scene: scene,
-    scaleMode: Phaser.Scale.NONE,
+scene.preload = function() {
+    this.load.image('box', 'assets/box.png');
+    this.load.image('Fon', 'assets/Fon.png');
 };
 
+scene.create = function() {
 
-const GAME = new Phaser.Game(config);
+    let fonSprite = this.add.sprite(0, 0, 'Fon').setOrigin(0, 0);
+    fonSprite.setScale(1280 / fonSprite.width, 663 / fonSprite.height);
+    let boxSprite = this.add.sprite(-1, 585, 'box').setOrigin(0, 0);
+    boxSprite.setScale(0.2);
+};
+
+let config = {
+    type: Phaser.AUTO,
+    width: 1280,
+    height: 720,
+    scene: scene
+};
+
+let game = new Phaser.Game(config);
