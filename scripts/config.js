@@ -1,4 +1,4 @@
 export const screenConfig = {
     WIDTH: 1920,
-    HEIGHT: 950,
+    HEIGHT: 991,
 }
