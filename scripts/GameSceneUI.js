@@ -7,7 +7,7 @@ export default class GameSceneUI extends Phaser.Scene {
     }
 
     preload = () => {
-        this.load.image("box", 'assets/box.png');
+        this.load.image("box", "assets/box.png");
         this.load.image("back", "assets/back.png");
     }
     create = () => {
