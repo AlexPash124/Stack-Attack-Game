@@ -15,6 +15,7 @@ export class MainCharacter extends Phaser.GameObjects.Sprite {
     runLeft() {
         this.setPosition(this.x - 50, this.y)
     }
+
     jump() {
         if (this.isRun) return;
         this.scene.tweens.add({
